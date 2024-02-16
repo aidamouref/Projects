@@ -1,7 +1,10 @@
 # Project: SHARKS ATTACK!!
 
+![Sharkfront](front_image_project_sa.png)
 
-**# Table of Contents**
+
+
+## **Table of Contents**
 * What is this about? (Project Description)
 * What do we have? (Data obtention)
 * Is there anything interesting? (Hipothesis making)
@@ -116,7 +119,11 @@ Then values were grouped by continent and age to see how results look like. A va
 
 ### **Hipothesis 2**: *Do sharks agree with Becky G and like them elder? Also do they any preferences on gender? Attack trends by age and sex*
 
-Sound is propagated more quickly and easily underwater. So what about music? Has already reggaeton arrived to the oceans and sharks like Becky G songs? The second hypothesis tries to prove whether attacks are more common on older people. A second subset (hip2) was created as a copy of the first subset (hip1).
+Sound is propagated more quickly and easily underwater. So what about music? Has already reggaeton arrived to the oceans and sharks like Becky G songs? 
+
+![Abuelobailando](https://i.gifer.com/8jIb.gif)
+
+The second hypothesis tries to prove whether attacks are more common on older people. A second subset (hip2) was created as a copy of the first subset (hip1).
 
 Again we face the problem of having many different ages. We check the unique values of age to check they are reasonable (e.g. not negative numbers or values upper than 120 years). Age categories were created using the function xxx that loops each value of the column age and includes it in a specific age group. A second function was also created (more general) to include the age in a specific string category (teenager, early adult, adult, elder, very old). 
 
