@@ -108,7 +108,7 @@ Also, other values were checked to see if there was missing data on them. Age ha
 
 Then values were grouped by continent and age to see how results look like. A variable n_attacks was created and equal to 1 (1 attack per observation). A boxplot was constructed with Seaborn in order to graphically plot the results. Axis and legend were adapted in size as well as the grid to make the graph easier to interpret. Most attacks were made in America, followed by Oceania and Africa. The whole America, Oceania and Africa are places full of surfists, so tasty for them! Probably sharks know they are famous in northamerican beaches and that can earn loads of money attacking there??
 
-![Graph1a](C:\Users\Aida\Documents\IRONHACK\Proyectos\Proyecto 1\Projects\Images\Graph1a.png)
+![Graph1a](Images/Graph1a.png)
 
 
 
