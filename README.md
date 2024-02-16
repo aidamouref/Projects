@@ -1,6 +1,6 @@
 # Project: SHARKS ATTACK!!
 
-![front_image_project_sa](front_image_project_sa.png)
+![front_image_project_sa](Images/front_image_project_sa.png)
 
 
 
@@ -121,7 +121,7 @@ Then values were grouped by continent and age to see how results look like. A va
 
 Sound is propagated more quickly and easily underwater. So what about music? Has already reggaeton arrived to the oceans and sharks like Becky G songs? 
 
-![8jlb](8jlb.gif)
+![8jlb](https://i.makeagif.com/media/2-07-2018/YER0Sf.gif)
 
 The second hypothesis tries to prove whether attacks are more common on older people. A second subset (hip2) was created as a copy of the first subset (hip1).
 
