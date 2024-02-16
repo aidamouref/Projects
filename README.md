@@ -2,13 +2,13 @@
 
 
 **# Table of Contents**
-* [What is this about? (Project Description)]
-* [What do we have? (Data obtention)]
-* [Is there anything interesting? (Hipothesis making)]
-* [Let the cleaning start! (EDA)]
-* [Getting some results (Visualization)]
-* [Let's be fare about it (Strengths and Weaknesses)]
-* [To wrap up (Conclusions)]
+* What is this about? (Project Description)
+* What do we have? (Data obtention)
+* Is there anything interesting? (Hipothesis making)
+* Let the cleaning start! (EDA)
+* Getting some results (Visualization)
+* Let's be fare about it (Strengths and Weaknesses)
+* To wrap up (Conclusions)
 
 ## What is this about?
 This analysis is based on the famous ‘Shark Attack’ dataframe. It comprises several variables related to shark attacks worldwide. Well known it is the importance of sharks, their role in Nature, their predator character… however, some questions still lie deep underwater. Should we try to dig deeper in how these attacks look like?
@@ -16,28 +16,28 @@ This analysis is based on the famous ‘Shark Attack’ dataframe. It comprises 
 # What do we have? 
 After opening the raw csv file, we can see the different variables we have to make our analysis. Let's make a brief interpretation of them! 
 
-**Case number**: *attack identifier (number)*
-**Date**: *date when the attack happened*
-**Year**: *year when the attack happened*
-**Type**: *type of attack (was it provoked? accidental? etc.)*
-**Country**: *country where the attack took place*
-**Area**: *area/state where the attack took place*
-**Location**: *city/town where the attack took place*
-**Activity**: *activity the victim was doing when attacked*
-**Name**: *name of the victim*
-**Sex**: *sex of the victim (male/female)*
-**Age**: *age of the victim (years)*
-**Injury**: *type of injury (location, seriousness)*
-**Fatal**: *the attack was fatal (death) or not*
-**Hour**: *hour when the attack took place*
-**Specie**: *type of shark (white shark, tiger shark, etc.)*
-**Investigator or Source**: *information on the investigator*
-**PDF**: *pdf information on the investigator*
-**href formula**: *URL to access the data*
-**href**: *URL to access the data*
-**Case number**: *case number*
-**Original order**: *original order*
-**Unnamed 22 y Unnamed 23**: *empty columns (no data)*
+* **Case number**: *attack identifier (number)*
+* **Date**: *date when the attack happened*
+* **Year**: *year when the attack happened*
+* **Type**: *type of attack (was it provoked? accidental? etc.)*
+* **Country**: *country where the attack took place*
+* **Area**: *area/state where the attack took place*
+* **Location**: *city/town where the attack took place*
+* **Activity**: *activity the victim was doing when attacked*
+* **Name**: *name of the victim*
+* **Sex**: *sex of the victim (male/female)*
+* **Age**: *age of the victim (years)*
+* **Injury**: *type of injury (location, seriousness)*
+* **Fatal**: *the attack was fatal (death) or not*
+* **Hour**: *hour when the attack took place*
+* **Specie**: *type of shark (white shark, tiger shark, etc.)*
+* **Investigator or Source**: *information on the investigator*
+* **PDF**: *pdf information on the investigator*
+* **href formula**: *URL to access the data*
+* **href**: *URL to access the data*
+* **Case number**: *case number*
+* **Original order**: *original order*
+* **Unnamed 22 y Unnamed 23**: *empty columns (no data)*
 
 So…maybe next step is to check them carefully to see which of those are relevant for our analysis? By looking at them, some look very similar, some very messy (such as species, url, etc.). We need to carefully consider the hypothesis we are going to make and which variables we need for that (no need to carefully clean at this point! We can miss a lot of data!). 
 
