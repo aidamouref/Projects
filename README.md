@@ -163,7 +163,6 @@ To show this graphically, a boxplot was made, showing that values fall mainly in
 
 
 To check the sex, the variable was cleaned looking at unique values. Some of them were converted using the replace method (if they were clear enough). Others were dropped if not clear enough. A histogram was made checking not only age groups by also sex. It is clearly showns that men were more attacked than women. Interesting results…less ability to swim? More unconscious? Weaker? 😊 
-Values range from x to x and from x to x in men and women. Skewed? Etc. 
 
 
 ![Graph2b](Images/Graph2b.png)
