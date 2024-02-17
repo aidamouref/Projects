@@ -1,6 +1,6 @@
 # Project: SHARKS ATTACK!!
 
-![front_image_project_sa](Images/front_image_project_sa.png)
+![front_image_project_sa](images/front_image_project_sa.png)
 
 
 
@@ -16,7 +16,7 @@
 ## What is this about?
 This analysis is based on the famous ‘Shark Attack’ dataframe. It comprises several variables related to shark attacks worldwide. Well known it is the importance of sharks, their role in Nature, their predator character… however, some questions still lie deep underwater. Should we try to dig deeper in how these attacks look like?
 
-# What do we have? 
+## What do we have? 
 After opening the raw csv file, we can see the different variables we have to make our analysis. Let's make a brief interpretation of them! 
 
 * **Case number**: *attack identifier (number)*
@@ -64,7 +64,8 @@ First of all, we must make a copy of the dataset in order to use the version we 
 * What type of data we have?(integers, floats, strings, objects,etc.)
 
 We start having a dataset of almost 26,000 rows and 24 columns. After applying visualization commands (such as df.info(), df.sample(), df.tail(), pd.isnull()) we observe there is almost 70% of missing data! 
-** Steps:
+
+### Steps:
 - Create a function that shows how many columns have more than 90% data missing.  
 - Check the rows that have 80% missing data or more (based on the length of the row - number of variables)
 - Values were replaced for the correct value if possible to guess. Otherwise, the value was dropped
@@ -79,12 +80,16 @@ Finally, a reset index was made in order to have it ordered. The clean dataframe
 # Getting some results
 Now we have a fairly general cleaning, we can start thinking about the hypothesis solving. A subset was created with the variables that could be related to the first hypothesis testing and called 'hip1', 'hip2', 'hip3' depending on the questions we wanted to anwer.
 
-### **Hipothesis 1**: *Are attacks international? How much do sharks like attacking worldwide? Do they consider maybe people from specific places specially tasty?*
+#### **Hipothesis 1**: *Are attacks international? How much do sharks like attacking worldwide? Do they consider maybe people from specific places specially tasty?*
 
 First checked the variable country. By looking at the unique values, it has many different country names. This will result in graphs that are complicated to interpret. Hence an approach by continent was made instead. A function was created where lists with all countries per continent were created (source: WHO). These were treated to have the specific format in strings for each country. Then, a for loop was created so that for each value in the country column from the dataset the specific continent was returned using a lambda. Other countries not included in the lists were named as ‘Other’ so that they can be analysed more specifically.
 
 
 ```Python
+
+from Funciones import continente
+
+
 def continente(pais):
     asia=['Kazakhstan', 'Kyrgyzstan', 'Tajikistan', 'Turkmenistan', 'Uzbekistan', 'China', 'Korea', 'Japan', 'Mongolia', 'Afghanistan', 'Bangladesh', 'Bhutan', 'India', 'Iran', 'Maldives', 'Nepal', 'Pakistan', 'Sri Lanka','Brunei', 'Darussalam', 'Cambodia', 'Indonesia', 'Lao', 'Malaysia', 'Myanmar', 'Philippines', 'Singapore', 'Thailand', 'Timor-Leste', 'Viet Nam', 'Armenia', 'Azerbaijan', 'Bahrain', 'Cyprus', 'Georgia', 'Iraq', 'Israel', 'Jordan', 'Kuwait', 'Lebanon', 'Oman', 'Qatar', 'Saudi Arabia', 'Palestine', 'Syria', 'Turkey', 'United Arab Emirates', 'Yemen']
     europe= ['Albania' ,'Andorra' ,'Austria' ,'Belarus' ,'Belgium' ,'Bosnia Herzegovina' ,'Bulgaria' ,'Croatia' ,'Cyprus' ,'Czech' ,'Denmark' ,'Estonia' ,'Finland' ,'France' ,'Germany' ,'Greece' ,'Hungary' ,'Iceland' ,'Ireland' ,'Italy' ,'Latvia' ,'Liechtenstein' ,'Lithuania' ,'Luxembourg' ,'Malta' ,'Moldova' ,'Monaco' ,'Montenegro' ,'Netherlands' ,'North' ,'Macedonia' ,'Norway' ,'Poland' ,'Portugal' ,'Romania' ,'Russia' ,'San Marino' ,'Serbia' ,'Slovakia' ,'Slovenia' ,'Spain' ,'Sweden' ,'Switzerland' ,'Ukraine' ,'United Kingdom']
@@ -105,7 +110,8 @@ def continente(pais):
     else:
         return "Other"
     
-  hip1['Continente'] = hip1['Country'].apply(lambda x: continente(x))  
+
+hip1['Continente'] = hip1['Country'].apply(lambda x: continente(x))  
   ```
 
 
@@ -117,7 +123,7 @@ Then values were grouped by continent and age to see how results look like. A va
 
 
 
-### **Hipothesis 2**: *Do sharks agree with Becky G and like them elder? Also do they any preferences on gender? Attack trends by age and sex*
+#### **Hipothesis 2**: *Do sharks agree with Becky G and like them elder? Also do they any preferences on gender? Attack trends by age and sex*
 
 Sound is propagated more quickly and easily underwater. So what about music? Has already reggaeton arrived to the oceans and sharks like Becky G songs? 
 
@@ -149,28 +155,43 @@ hip2['Grupedad_cat'] = hip2['Age'].apply(lambda x: grupedad_cat(x))
 
 ```
 
-To show this graphically, a boxplot was made, showing that values fall mainly in the adult category and values go from 5 years to xx. It also shows some outliers (elder people) who were also bitten. 
+To show this graphically, a boxplot was made, showing that values fall mainly in the adult category and values go from 5 years to 70's approximately. It also shows some outliers (elder people) who were also bitten. 
 
-![Graph2a](Images/Graph2a.png)
+![Graph2a](images/Graph2a.png)
 
 
 To check the sex, the variable was cleaned looking at unique values. Some of them were converted using the replace method (if they were clear enough). Others were dropped if not clear enough (only xx were dropped). A histogram was made checking not only age groups by also sex. It is clearly showns that men were more attacked than women. Interesting results…less ability to swim? More unconscious? Weaker? 😊 
 Values range from x to x and from x to x in men and women. Skewed? Etc. 
 
 
-![Graph2b](Images/Graph2b.png)
+![Graph2b](images/Graph2b.png)
 
 
 Finally, letality is an important factor to bear in mind if you are attacked by a shark (just saying...). A histogram was plotted to check the levels of letality of shark attacks by age (of the victims, not of the shark). 
 
-![Graph2c](Images/Graph2c.png)
+![Graph2c](images/Graph2c.png)
 
 Luckily most of the attacks resulted in non-fatal. The shape of the histogram is slightly skewed to the right, showing that young-medium aged people was more attacked than elderly people (less yummy?). This means the median and the mean do not match (the mean is bigger than the median as the bigger values to the right make it increase). Mode is around the twenties. Maybe these victims were more imprudent (trying to show themselves in front of colleagues or their crush?)
 
 
-### **Hipothesis 3**: *Is Jaws accurate?  Which shark specie attacks the most?*
-
+#### **Hipothesis 3**: *Is Jaws accurate?  Which shark specie attacks the most?*
 
 Finally the last hypothesis was done by checking how many times a specific specie was repeated. The column was quite messy (free text cell) so regex was employed to detect the word immediately before the word ‘Shark’. This worked fairly well. In the cases were a non-specie word was obtained the observation was included as ‘Other’ in order to obtain a data robust subset and not dropping.  With this information, a wordcloud was presented using the shark. The conclusion is clear: **Jaws was accurate**. The **white shark** is the most letal shark (attackswise).
 
-![Shark_wc](Images/Shark_wc.png)
+![Shark_wc](images/Shark_wc.png)
+
+#Let's be fare about it: strengths and weaknesses
+
+- Df big enough to have small subsets for extreme drop of missing data
+- Availability of resources on the Internet/lectures
+- Some assumptions too wide (dropping, reconverting to "other", etc.)
+- Conclusions that may not be extremely robust
+
+
+## Bonus: Potential model
+Linear regression to find the relationship between attacks and other variables. For example, the number of attacks on a specific geographical area are related to the shark specie, the age and the sex of the victim. Now we would need to give values to the parameters to check how much weight has each of these X variables over the Y (number of attacks) and test its robustness (are other values that could also explain attacks? how well these three variables explain the number of attacks?)
+
+
+## Conclusion
+Sharks are important but they teeth too. Attacks happen worldwide and are centered in middle-age victims.
+White shark, followed by Tiger shark, are species that better watch close just in movies!!
