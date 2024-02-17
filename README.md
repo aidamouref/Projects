@@ -49,11 +49,13 @@ So…maybe next step is to check them carefully to see which of those are releva
 
 By carefully considering the variables we have and the data contained in each of them…we are going to talk about a few relevant hypothesis:
 
-**Hipothesis 1**: *Are attacks international? How much do sharks like attacking worldwide? Do they consider maybe people from specific places specially tasty?*
+* **Hipothesis 1**: *Are attacks international? How much do sharks like attacking worldwide? Do they consider maybe people from specific places specially tasty?*
 
-**Hipothesis 2**: *Do sharks agree with Becky G and like them elder? Also do they any preferences on gender? Attack trends by age and sex*
+* **Hipothesis 2**: *Do sharks agree with Becky G and like them elder? Also do they any preferences on gender? Attack trends by age and sex*
 
-**Hipothesis 3**: *Is Jaws accurate?  Which shark specie attacks the most?*
+* **Hipothesis 3**: *Do Shark follow commonsense by killing more elder people than younger people?*
+
+* **Hipothesis 4**: *Is Jaws accurate?  Which shark specie attacks the most?*
 
 ## So...how are we going to do all that?
 
@@ -131,7 +133,7 @@ Sound is propagated more quickly and easily underwater. So what about music? Has
 
 The second hypothesis tries to prove whether attacks are more common on older people. A second subset (hip2) was created as a copy of the first subset (hip1).
 
-Again we face the problem of having many different ages. We check the unique values of age to check they are reasonable (e.g. not negative numbers or values upper than 120 years). Age categories were created using the function xxx that loops each value of the column age and includes it in a specific age group. A second function was also created (more general) to include the age in a specific string category (teenager, early adult, adult, elder, very old). 
+Again we face the problem of having many different ages. We check the unique values of age to check they are reasonable (e.g. not negative numbers or values upper than 120 years). Age categories were created using the function 'grupedad' that loops each value of the column age and includes it in a specific age group. A second function was also created (more general) to include the age in a specific string category (teenager, early adult, adult, elder, very old). 
 
 
 ```Python
@@ -160,21 +162,23 @@ To show this graphically, a boxplot was made, showing that values fall mainly in
 ![Graph2a](Images/Graph2a.png)
 
 
-To check the sex, the variable was cleaned looking at unique values. Some of them were converted using the replace method (if they were clear enough). Others were dropped if not clear enough (only xx were dropped). A histogram was made checking not only age groups by also sex. It is clearly showns that men were more attacked than women. Interesting results…less ability to swim? More unconscious? Weaker? 😊 
+To check the sex, the variable was cleaned looking at unique values. Some of them were converted using the replace method (if they were clear enough). Others were dropped if not clear enough. A histogram was made checking not only age groups by also sex. It is clearly showns that men were more attacked than women. Interesting results…less ability to swim? More unconscious? Weaker? 😊 
 Values range from x to x and from x to x in men and women. Skewed? Etc. 
 
 
 ![Graph2b](Images/Graph2b.png)
 
 
-Finally, letality is an important factor to bear in mind if you are attacked by a shark (just saying...). A histogram was plotted to check the levels of letality of shark attacks by age (of the victims, not of the shark). 
+#### **Hipothesis 3**: *Do Shark follow commonsense by killing more elder people than younger people?*
+
+Letality is an important factor to bear in mind if you are attacked by a shark (just saying...). A histogram was plotted to check the levels of letality of shark attacks by age (of the victims, not of the shark). 
 
 ![Graph2c](Images/Graph2c.png)
 
 Luckily most of the attacks resulted in non-fatal. The shape of the histogram is slightly skewed to the right, showing that young-medium aged people was more attacked than elderly people (less yummy?). This means the median and the mean do not match (the mean is bigger than the median as the bigger values to the right make it increase). Mode is around the twenties. Maybe these victims were more imprudent (trying to show themselves in front of colleagues or their crush?)
 
 
-#### **Hipothesis 3**: *Is Jaws accurate?  Which shark specie attacks the most?*
+#### **Hipothesis 4**: *Is Jaws accurate?  Which shark specie attacks the most?*
 
 Finally the last hypothesis was done by checking how many times a specific specie was repeated. The column was quite messy (free text cell) so regex was employed to detect the word immediately before the word ‘Shark’. This worked fairly well. In the cases were a non-specie word was obtained the observation was included as ‘Other’ in order to obtain a data robust subset and not dropping.  With this information, a wordcloud was presented using the shark. The conclusion is clear: **Jaws was accurate**. The **white shark** is the most letal shark (attackswise).
 
