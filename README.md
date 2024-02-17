@@ -119,7 +119,7 @@ hip1['Continente'] = hip1['Country'].apply(lambda x: continente(x))
 
 Also, other values were checked to see if there was missing data on them. Age has loads of missing data so imputation was dismissed in order to get estimates that are not representative. Values were dropped instead, as the N of observations is still high and representative. 
 
-Then values were grouped by continent and age to see how results look like. A variable n_attacks was created and equal to 1 (1 attack per observation). A boxplot was constructed with Seaborn in order to graphically plot the results. Axis and legend were adapted in size as well as the grid to make the graph easier to interpret. Most attacks were made in America, followed by Oceania and Africa. The whole America, Oceania and Africa are places full of surfists, so tasty for them! Probably sharks know they are famous in northamerican beaches and that can earn loads of money attacking there??
+Then values were grouped by continent and age to see how results look like. A variable n_attacks was created and equal to 1 (1 attack per observation). A barplot was constructed with Seaborn in order to graphically plot the results. Axis and labels were adapted in size as well as the grid to make the graph easier to interpret. Most attacks were made in America, followed by Oceania and Africa. The whole America, Oceania and Africa are places full of surfists, so tasty for them! Probably sharks know they are famous in northamerican beaches and that can earn loads of money attacking there??
 
 ![Graph1a](Images/Graph1a.png)
 
@@ -196,5 +196,5 @@ Linear regression to find the relationship between attacks and other variables. 
 
 
 ## Conclusion
-Sharks are important but they teeth too. Attacks happen worldwide and are centered in middle-age victims.
+Sharks are important but their teeth too. Attacks happen worldwide and are centered in middle-age victims.
 White shark, followed by Tiger shark, are species that better watch close just in movies!!
