@@ -53,7 +53,7 @@ By carefully considering the variables we have and the data contained in each of
 
 * **Hipothesis 2**: *Do sharks agree with Becky G and like them elder? Also do they any preferences on gender? Attack trends by age and sex*
 
-* **Hipothesis 3**: *Do Shark follow commonsense by killing more elder people than younger people?*
+* **Hipothesis 3**: *Do Shark finish the work? and do they follow commonsense by killing more elder people than younger people?*
 
 * **Hipothesis 4**: *Is Jaws accurate?  Which shark specie attacks the most?*
 
@@ -169,7 +169,7 @@ Values range from x to x and from x to x in men and women. Skewed? Etc.
 ![Graph2b](Images/Graph2b.png)
 
 
-#### **Hipothesis 3**: *Do Shark follow commonsense by killing more elder people than younger people?*
+#### **Hipothesis 3**: *Do Sharks finish the work? and do they follow commonsense by killing more elder people than younger people?*
 
 Letality is an important factor to bear in mind if you are attacked by a shark (just saying...). A histogram was plotted to check the levels of letality of shark attacks by age (of the victims, not of the shark). 
 
