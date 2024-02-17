@@ -184,7 +184,7 @@ Finally the last hypothesis was done by checking how many times a specific speci
 
 ![Shark_wc](Images/Shark_wc.png)
 
-# Let's be fare about it: strengths and weaknesses
+## Let's be fare about it: strengths and weaknesses
 
 - Df big enough to have small subsets for extreme drop of missing data
 - Availability of resources on the Internet/lectures
