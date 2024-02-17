@@ -1,6 +1,6 @@
 # Project: SHARKS ATTACK!!
 
-![front_image_project_sa](images/front_image_project_sa.png)
+![front_image_project_sa](Images/front_image_project_sa.png)
 
 
 
@@ -157,19 +157,19 @@ hip2['Grupedad_cat'] = hip2['Age'].apply(lambda x: grupedad_cat(x))
 
 To show this graphically, a boxplot was made, showing that values fall mainly in the adult category and values go from 5 years to 70's approximately. It also shows some outliers (elder people) who were also bitten. 
 
-![Graph2a](images/Graph2a.png)
+![Graph2a](Images/Graph2a.png)
 
 
 To check the sex, the variable was cleaned looking at unique values. Some of them were converted using the replace method (if they were clear enough). Others were dropped if not clear enough (only xx were dropped). A histogram was made checking not only age groups by also sex. It is clearly showns that men were more attacked than women. Interesting results…less ability to swim? More unconscious? Weaker? 😊 
 Values range from x to x and from x to x in men and women. Skewed? Etc. 
 
 
-![Graph2b](images/Graph2b.png)
+![Graph2b](Images/Graph2b.png)
 
 
 Finally, letality is an important factor to bear in mind if you are attacked by a shark (just saying...). A histogram was plotted to check the levels of letality of shark attacks by age (of the victims, not of the shark). 
 
-![Graph2c](images/Graph2c.png)
+![Graph2c](Images/Graph2c.png)
 
 Luckily most of the attacks resulted in non-fatal. The shape of the histogram is slightly skewed to the right, showing that young-medium aged people was more attacked than elderly people (less yummy?). This means the median and the mean do not match (the mean is bigger than the median as the bigger values to the right make it increase). Mode is around the twenties. Maybe these victims were more imprudent (trying to show themselves in front of colleagues or their crush?)
 
@@ -178,7 +178,7 @@ Luckily most of the attacks resulted in non-fatal. The shape of the histogram is
 
 Finally the last hypothesis was done by checking how many times a specific specie was repeated. The column was quite messy (free text cell) so regex was employed to detect the word immediately before the word ‘Shark’. This worked fairly well. In the cases were a non-specie word was obtained the observation was included as ‘Other’ in order to obtain a data robust subset and not dropping.  With this information, a wordcloud was presented using the shark. The conclusion is clear: **Jaws was accurate**. The **white shark** is the most letal shark (attackswise).
 
-![Shark_wc](images/Shark_wc.png)
+![Shark_wc](Images/Shark_wc.png)
 
 #Let's be fare about it: strengths and weaknesses
 
